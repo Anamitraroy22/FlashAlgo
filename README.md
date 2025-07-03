@@ -35,3 +35,36 @@ git clone https://github.com/Anamitraroy22/FlashAlgo.git
 cd FlashAlgo
 npm install
 npm run dev
+
+🌐 Live Demo
+👉 Coming soon on Netlify / Vercel
+
+📁 Folder Structure
+css
+Copy
+Edit
+src/
+├── assets/              
+├── components/          
+├── pages/               
+└── App.tsx              
+💡 Roadmap
+✅ Hero section
+
+✅ Login/signup modal
+
+✅ Spline Earth animation
+
+🔜 Backend authentication (Firebase / Supabase)
+
+🔜 User dashboard & trading insights
+
+🔜 Live trading metrics from API
+
+🤝 Contributing
+Pull requests are welcome. For major changes, open an issue first to discuss what you would like to change.
+
+📄 License
+MIT License
+
+Crafted with 💜 by Anamitra Roy
