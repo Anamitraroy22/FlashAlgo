@@ -1,0 +1,191 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* FlashAlgo Design System - Luxury AI Crypto Trading App */
+
+@layer base {
+    :root {
+        /* Luxury dark theme with purple accents */
+        --background: 210 50% 4%;
+        --foreground: 210 40% 98%;
+
+        --card: 210 40% 8%;
+        --card-foreground: 210 40% 98%;
+
+        --popover: 210 40% 8%;
+        --popover-foreground: 210 40% 98%;
+
+        --primary: 262 80% 65%;
+        --primary-foreground: 210 40% 98%;
+
+        --secondary: 210 40% 12%;
+        --secondary-foreground: 210 40% 98%;
+
+        --muted: 210 40% 15%;
+        --muted-foreground: 215 16% 65%;
+
+        --accent: 280 100% 70%;
+        --accent-foreground: 210 40% 98%;
+
+        --destructive: 0 84% 60%;
+        --destructive-foreground: 210 40% 98%;
+
+        --border: 210 40% 15%;
+        --input: 210 40% 12%;
+        --ring: 262 80% 65%;
+
+        --radius: 1rem;
+
+        /* Luxury gradients */
+        --gradient-primary: linear-gradient(135deg, hsl(262 80% 65%), hsl(280 100% 70%));
+        --gradient-dark: linear-gradient(135deg, hsl(210 50% 4%), hsl(210 40% 8%));
+        --gradient-glass: linear-gradient(135deg, hsla(210 40% 12% / 0.8), hsla(210 40% 15% / 0.6));
+
+        /* Neumorphism shadows */
+        --shadow-neumorph: 8px 8px 16px hsl(210 50% 2%), -8px -8px 16px hsl(210 40% 10%);
+        --shadow-neumorph-inset: inset 4px 4px 8px hsl(210 50% 2%), inset -4px -4px 8px hsl(210 40% 10%);
+        --shadow-glow: 0 0 20px hsl(262 80% 65% / 0.3);
+        --shadow-glow-hover: 0 0 30px hsl(262 80% 65% / 0.5);
+
+        /* Glass effects */
+        --glass-bg: hsla(210 40% 12% / 0.7);
+        --glass-border: hsla(210 40% 20% / 0.3);
+
+        /* Animation timings */
+        --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        --transition-bounce: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+        --sidebar-background: 0 0% 98%;
+
+        --sidebar-foreground: 240 5.3% 26.1%;
+
+        --sidebar-primary: 240 5.9% 10%;
+
+        --sidebar-primary-foreground: 0 0% 98%;
+
+        --sidebar-accent: 240 4.8% 95.9%;
+
+        --sidebar-accent-foreground: 240 5.9% 10%;
+
+        --sidebar-border: 220 13% 91%;
+
+        --sidebar-ring: 217.2 91.2% 59.8%;
+    }
+
+    .dark {
+        --background: 222.2 84% 4.9%;
+        --foreground: 210 40% 98%;
+
+        --card: 222.2 84% 4.9%;
+        --card-foreground: 210 40% 98%;
+
+        --popover: 222.2 84% 4.9%;
+        --popover-foreground: 210 40% 98%;
+
+        --primary: 210 40% 98%;
+        --primary-foreground: 222.2 47.4% 11.2%;
+
+        --secondary: 217.2 32.6% 17.5%;
+        --secondary-foreground: 210 40% 98%;
+
+        --muted: 217.2 32.6% 17.5%;
+        --muted-foreground: 215 20.2% 65.1%;
+
+        --accent: 217.2 32.6% 17.5%;
+        --accent-foreground: 210 40% 98%;
+
+        --destructive: 0 62.8% 30.6%;
+        --destructive-foreground: 210 40% 98%;
+
+        --border: 217.2 32.6% 17.5%;
+        --input: 217.2 32.6% 17.5%;
+        --ring: 212.7 26.8% 83.9%;
+        --sidebar-background: 240 5.9% 10%;
+        --sidebar-foreground: 240 4.8% 95.9%;
+        --sidebar-primary: 224.3 76.3% 48%;
+        --sidebar-primary-foreground: 0 0% 100%;
+        --sidebar-accent: 240 3.7% 15.9%;
+        --sidebar-accent-foreground: 240 4.8% 95.9%;
+        --sidebar-border: 240 3.7% 15.9%;
+        --sidebar-ring: 217.2 91.2% 59.8%;
+    }
+}
+
+@layer base {
+    * {
+        @apply border-border;
+    }
+
+    body {
+        @apply bg-background text-foreground font-light;
+        font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+        overflow-x: hidden;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+        @apply font-light tracking-tight;
+    }
+
+    /* Glassmorphism utility */
+    .glass {
+        background: var(--glass-bg);
+        backdrop-filter: blur(20px);
+        border: 1px solid var(--glass-border);
+    }
+
+    /* Neumorphism button */
+    .neumorph-btn {
+        background: hsl(var(--secondary));
+        box-shadow: var(--shadow-neumorph);
+        transition: var(--transition-smooth);
+    }
+
+    .neumorph-btn:hover {
+        box-shadow: var(--shadow-neumorph), var(--shadow-glow-hover);
+        transform: translateY(-2px);
+    }
+
+    .neumorph-btn:active {
+        box-shadow: var(--shadow-neumorph-inset);
+        transform: translateY(0);
+    }
+
+    /* Scroll animations */
+    .fade-in-up {
+        opacity: 0;
+        transform: translateY(30px);
+        transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .fade-in-up.animate {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    /* Page entrance animation */
+    .page-enter {
+        animation: pageEnter 0.8s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+    }
+
+    @keyframes pageEnter {
+        from {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    /* Blur scroll effect */
+    .blur-scroll {
+        backdrop-filter: blur(0px);
+        transition: backdrop-filter 0.3s ease;
+    }
+
+    .blur-scroll.scrolled {
+        backdrop-filter: blur(20px);
+    }
+}
