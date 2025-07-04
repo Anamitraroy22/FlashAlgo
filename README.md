@@ -2,7 +2,7 @@
 
 FlashAlgo is a cutting-edge AI-powered crypto trading landing page built with modern web technologies. It showcases the vision of automating cryptocurrency investments using artificial intelligence.
 🌐 Live Demo
-(https://flashalgo-ai.netlify.app/)
+https://flashalgo-ai.netlify.app/
 
 ![FlashAlgo Preview](./src/assets/dashboard-mockup.jpg)
 
